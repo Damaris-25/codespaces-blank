@@ -1,0 +1,329 @@
+/* General Styles */
+body {
+    font-family: "Montserrat", sans-serif;
+    background: url(https://www.mexicodesconocido.com.mx/sites/default/files/fichas-destino/historia-bandera-mexico-actual-2016.jpg) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: justify;
+    color: #fff;
+  }
+  
+  /* Header */
+  header {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: white;
+  }
+  
+  /* Navbar */
+  #franja2 {
+    width: 100%;
+    background-color: #10312B;
+    border-bottom: 4px solid #BC955C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 64px;
+  }
+  
+  #franja2 .usuario {
+    color: white;
+    font-size: 1em;
+    margin-right: 20px;
+  } 
+  
+  #franja2 nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  
+  
+  #franja2 a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+  }
+  
+  #franja2 a:hover {
+    color: #BC955C;
+  }
+  
+  /* Logo Section */
+  #franja {
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    height: 64px;
+    background-color: #10312B;
+  }
+  
+  .Mex {
+    width: 200px;
+    height: auto;
+  }
+  
+  .CRE {
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Main Content */
+  .main {
+    background: #98989A;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 5px 20px 50px #000;
+    display: grid; 
+    position: relative;
+  }
+  
+  /* Modal */
+  .modal_container {
+    display: none;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+  }
+  
+  .show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .modal {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0s ease-in;
+  }
+  
+  .modal.is-invisible {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .modal-dialog {
+    max-width: 600px;
+    max-height: 80vh;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow: auto;
+    cursor: default;
+  }
+  
+  .modal-dialog > * {
+    padding: 1rem;
+  }
+  
+  .modal p + p {
+    margin-top: 1rem;
+  }
+  
+  /* Close Modal Button */
+  .close-modal {
+    font-family: 'Montserrat', sans-serif;
+    background: #691C32;
+    color: white;
+    border-radius: 12px;
+    margin-left: 160px;
+    margin-bottom: 60px;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  .close-modal:hover {
+    background: #691C32;
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: flex;
+    font-size: 15px;
+    text-decoration: none;
+    text-align: center;
+    margin: 55px;
+    padding: 15px 50px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 30px;
+  }
+  
+  .btn-light {
+    background: #691C32;
+    color: #fff;
+    margin-top: 15px;
+  }
+  
+  .btn-light:hover {
+    background: #691C32;
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .btn-out {
+    font-family: 'Montserrat', sans-serif;
+    background: #691C32;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 15px 90px;
+  }
+  
+  .btn-out:hover {
+    text-decoration: underline;
+  }
+  
+  /* Forms */
+  .login {
+    margin-top: 30px;
+    height: 460px;
+    background: #98989A;
+    border-radius: 60% / 10%;
+    transform: translateY(100px);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .login label {
+    color: #000000;
+    transform: scale(.8);
+  }
+  
+  .login label.forgot-password {
+    color: #3b12f3;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-left: 85px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .login label.forgot-password:hover {
+    color: #E85A4F;
+  }
+  
+  #chk:checked ~ .login {
+    transform: translateY(-280px);
+  }
+  
+  #chk:checked ~ .login label {
+    transform: scale(1);
+  }
+  
+  #chk:checked ~ .signup label {
+    transform: scale(.9);
+  }
+  
+  .correo {
+    font-family: 'Montserrat', sans-serif;
+    width: 65%;
+    margin-left: 60px;
+    border-radius: 10px;
+    margin-top: 30px;
+    height: 30px;
+  }
+  
+  .contraseña {
+    font-family: 'Montserrat', sans-serif;
+    width: 65%;
+    margin-left: 60px;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 30px;
+  }
+  
+  /* Content */
+  #consulta {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: justify;
+  }
+  
+  p {
+    font-size: 1.1em;
+    display: flex;
+    margin: 10%;
+    position: relative;
+    text-align: justify;
+    justify-items: end;
+  }
+  
+  #title {
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #Con {
+    justify-content: left;
+    font-size: 1em;
+    margin-left: 30px;
+    margin-right: 0;
+    margin-top: -20px;
+    margin-bottom: 0;
+  }
+  
+  #ACC {
+    justify-content: right;
+    font-size: 1em;
+    margin-right: 30px;
+    margin-left: 220px;
+    margin-bottom: 0;
+    margin-top: -20px;
+  }
+  
+  #Con:hover {
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 25px;
+    margin-right: 0;
+    margin-top: -22px;
+    margin-bottom: 0;
+    background: #10312B;
+    color: #fff;
+    padding: 2px 12px;
+    border-radius: 6px;
+  }
+  
+  #ACC:hover {
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 210px;
+    margin-right: 0;
+    margin-top: -22px;
+    margin-bottom: 0;
+    background: #10312B;
+    color: #fff;
+    padding: 2px 12px;
+    border-radius: 6px;
+  }
+  
