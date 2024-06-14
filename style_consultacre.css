@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: -40;
+}
+
+
+header {
+    background-color: #10312B; /* Color de la franja */
+    height: 75px; /* Altura de la franja */
+    width: 100%; /* Ancho de la franja */
+}
+
+header .franja1 {
+    padding: 10px 100px;
+    justify-content: center;
+    color: white; /* Color del texto */
+    font-size: 20px; /* Tamaño del texto */
+}
+
+.CRE{
+    margin-top: 10px;
+    margin-bottom: 60px;
+    margin-left: 1250px;
+    margin-right: 0px;
+    Width: 100px;
+    Height: 50px;
+  }
+  
+
+.Bienvenidos{
+    background-color: #98989A;
+    justify-content:right;
+}
