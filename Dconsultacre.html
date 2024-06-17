@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+   <Head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cosulta CRE</title>
+        <link rel="stylesheet" href="style_consultacre.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+  </Head>
+
+    <Body>
+
+        <header>
+            <img src="https://s-cel.cre.gob.mx/scel/img/CRE_BLANCO.png" align="left" class="CRE">
+            <p class="Bienvenidos">Bienvenido/a Usuario CRE</p>
+            <img src="https://framework-gb.cdn.gob.mx/landing/img/logofooter.png"  aling="rigth" class="logomex" />
+            
+        </header>
+
+        <div class="introduccion">
+            <p class="introducciondiseño">En esta página podrás consultar infraestructura en México y registros de: Electrolineras, Electroterminales y Centros de carga. 
+                Además podrás cosultar datos actualizados de las tarifas que ofrecen las diferentes marcas</p>
+                <div class="lineatexto"></div>
+            </div>
+    
+        <nav id="franja2">
+            <a href="#" class="nav-button">
+                <img src="electrolinera.png" class="logoelectroterminal" alt="electroterminal">
+               <span> Electrolineras</span>
+            </a>
+        
+            <a href="#" class="nav-button">
+                <img src="estacioncarga.png" class= "logoestacion" alt="estacion">
+               <span> Estaciones de carga </span>
+            </a>
+            <nav id="franja2">
+                <a href="#" class="nav-button">
+                    <img src="electerminal.png" class="electroterminal" alt="electroterminal">
+                    <span>Electroterminales </span>
+                </a>
+        </nav>
+
+        
+        
+        <main>
+            <aside class="aside">
+                <div class="sidebar-image">
+                    <img src="gob.png" alt="Logo CRE">
+                </div>
+                <h2 class="titulomenu">ElectroCre</h2>
+                
+                <nav class="sidebar-menu">
+                    <ul>
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="expediente.png" alt="Expedientes" class="menu-icon">
+                                EXPEDIENTES
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="reporte.png" alt="Reportes Trimestrales" class="menu-icon">
+                                REPORTES TRIMESTRALES
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="verificacion.png" alt="Verificación de Solicitud de Alta" class="menu-icon">
+                                VERIFICACIÓN DE SOLICITU DE ALTA
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">
+                                <img src="cerrar.png" alt="Cerrar Sesión" class="menu-icon">
+                                CERRAR SESION
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+                <div class="tabo">
+                    <p class="titulomapa">Mapa de Electrolineras en el país</p>
+            
+                    <div id="Contenedor_del_mapa">
+                        <!-- Aquí debería ir el mapa -->
+                    </div>
+            
+                    <div id="contenedor_grafico">
+                        <!-- Aquí debería ir el gráfico de Highcharts -->
+                    </div>
+
+                    <div id="contenedor_grafico2" class="chart-container"></div>
+                    <div id="contenedor_grafico1" class="chart-container"></div>
+
+                </div>
+            </main>
+            
+            <script src="mapa_georeferenciado.js"></script>
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>
+            <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+            
+            <script>
+            
+                    Highcharts.chart('contenedor_grafico', {
+                        chart: {
+                            type: 'column'
+                        },
+                        title: {
+                            text: 'Total de Electrolineras por Entidad Federativa'
+                        },
+                        subtitle: {
+                            //text: 'Source: <a href="https://worldpopulationreview.com/world-cities" target="_blank">World Population Review</a>'//
+                        },
+                        xAxis: {
+                            type: 'category',
+                            labels: {
+                                autoRotation: [-45, -90],
+                                style: {
+                                    fontSize: '13px',
+                                    fontFamily: 'Montserrat, sans-serif'
+                                }
+                            }
+                        },
+                        yAxis: {
+                            min: 0,
+                            title: {
+                                text: 'Número de Electrolineras'
+                            }
+                        },
+                        legend: {
+                            enabled: false
+                        },
+                        tooltip: {
+                            pointFormat: 'Electrolineras: <b>{point.y:.1f}</b>'
+                        },
+                        series: [{
+                            name: 'Population',
+                            colors: [
+                                '#BC955C'
+                            ],
+                            colorByPoint: true,
+                            groupPadding: 0,
+                            data: [
+                                ['Aguascalientes', 37.33],
+                                ['Baja California', 31.18],
+                                ['Baja California Sur', 27.79],
+                                ['Campeche', 22.23],
+                                ['Chiapas', 21.91],
+                                ['Chihuahua', 21.74],
+                                ['Coahila ', 21.32],
+                                ['Colima', 20.89],
+                                ['Ciudad de México', 20.67],
+                                ['Durango', 19.11],
+                                ['Guanajuato', 16.45],
+                                ['Guerrero', 16.38],
+                                ['Hidalgo', 15.41],
+                                ['Jalisco', 15.25],
+                                ['México', 14.974],
+                                ['Michoacán ', 14.970],
+                                ['Morelos', 14.86],
+                                ['Nayarit', 14.16],
+                                ['Nuevo León', 13.79],
+                                ['Oaxaca', 13.64],
+                                ['Puebla',12],
+                                ['Querétaro',21],
+                                ['Quintana Roo',32],
+                                ['San Luis Potosí',34],
+                                ['Sinaloa',5],
+                                ['Sonora',54],
+                                ['Tabasco',35],
+                                ['Tamaulipas',2],
+                                ['Tlaxcala',32],
+                                ['Veracruz ',43],
+                                ['Yucatán',43],
+                                ['Zacatecas',54]
+                            ],
+                            dataLabels: {
+                                enabled: true,
+                                rotation: 0,
+                                color: '#000',
+                                inside: false,
+                                align: 'center',
+                                format: '{point.y:.0f}', // one decimal
+                                y: 0, // 10 pixels down from the top
+                                style: {
+                                    fontSize: '14px',
+                                    fontFamily: 'Montserrat, sans-serif'
+                                }
+                            }
+                        }]
+                    });
+
+ 
+        // Configuración del segundo gráfico
+        Highcharts.chart('contenedor_grafico1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Tarifas'
+            },
+            xAxis: {
+                type: 'category',
+                labels: {
+                    autoRotation: [-45, -90],
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Montserrat, sans-serif'
+                    }
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '$kWh'
+                }
+            },
+            legend: {
+                enabled: true
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.y}</b>'
+            },
+            series: [{
+                name: 'Marcas',
+                color: '#20603d',
+                data: [{
+                    name: 'CFE', y: 10
+                }, {
+                    name: 'TESLA', y: 8
+                }, {
+                    name: 'NISSAN Y BMW', y: 6
+                }, {
+                    name: 'CHARGEPOINT', y: 4
+                }]
+            }]
+        });
+                </script>
+             </main>
+            </body>
+            </html>
