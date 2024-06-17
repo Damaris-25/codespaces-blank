@@ -1,33 +1,417 @@
 body {
     margin: 0;
-    padding: -40;
+    padding: 0;
 }
 
 
 header {
     background-color: #10312B; /* Color de la franja */
-    height: 75px; /* Altura de la franja */
-    width: 100%; /* Ancho de la franja */
+    height: 60px; /* Altura de la franja */
+    width: 80%; /* Ancho de la franja */
+    display: flex;
+    align-items: center;
+    padding: 0 10px; /* Ajusta el padding según sea necesario */
+    color: white; /* Color del texto */
+    margin-top: 0px; /* Ajuste para superponer sobre la franja superior */
+    margin-bottom: -20px;/* Ajusta el margen inferior según sea necesario */
 }
 
-header .franja1 {
-    padding: 10px 100px;
-    justify-content: center;
-    color: white; /* Color del texto */
-    font-size: 20px; /* Tamaño del texto */
-}
 
 .CRE{
-    margin-top: 10px;
-    margin-bottom: 60px;
-    margin-left: 1250px;
-    margin-right: 0px;
-    Width: 100px;
-    Height: 50px;
+    margin-top: 60px; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 60px;/* Ajusta el margen inferior según sea necesario */
+    margin-left: 0px; /*ajustar al lado derecho*/
+    Width: 75px;
+    Height: 40px;
   }
   
+  .logomex{
 
+    margin-left: 695px;
+    margin-right: 0px;
+    Width: 110px;
+    Height: 50px;
+  }
+ 
 .Bienvenidos{
-    background-color: #98989A;
-    justify-content:right;
+    font-family: "Montserrat", sans-serif;
+    background-color: #10312B; 
+    margin-top:60px; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 60px;/* Ajusta el margen inferior según sea necesario */
+    margin-left: 0%; /*ajustar al lado derecho*/
+    margin-right:-14px;/* Ajusta el margen izquierdo según sea necesario */
+
+}
+
+main {
+  margin-top: 80px; /* Ajusta el margen superior según sea necesario para el contenido principal */
+  padding: 20px; /* Ajusta el padding según sea necesario */
+}
+
+.tabo {
+  flex: 1; /* Ocupa el espacio restante */
+  padding: 0 20px; /* Espaciado interno */
+}
+
+.titulomapa {
+  font-size: 25px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  color: #235B4E; /* Color del texto */
+  text-align: center; /* Alineación centrada */
+  margin-bottom: 10px; /* Margen inferior */
+  margin-top: 20px; /* Margen superior */
+  position: absolute; /* Fija el elemento en la posición deseada */
+  z-index: 1; /* Z-index alto para que se sobreponga */
+  top: 60px; /* Ajusta la posición desde el borde superior */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Centra horizontalmente con respecto al ancho del elemento */
+  width: 100%; /* Ancho completo */
+}
+
+
+/* MENU */
+
+.aside {
+  position: fixed; /* Fija el elemento en la posición deseada */
+  top: 0; /* Ajusta la posición desde la parte superior */
+  right: 0; /* Ajusta la posición desde el borde derecho */
+  width: 250px; /* Ancho del menú lateral */
+  height: 100%; /* Ocupa toda la altura disponible */
+  background-color: #dddddd; /* Color de fondo del menú */
+  padding-top: 20px; /* Espacio interno superior */
+  color:#BC955C;
+}
+
+.titulomenu {
+  font-size: 25px; /* Tamaño de fuente del título */
+  margin-bottom: 50px; /* Espacio inferior del título */
+  text-align: center; /* Alineación centrada del texto */
+  color: #10312B; /* Color del texto */
+  border-bottom: 3px solid #10312B; /* Línea divisoria bajo el título */
+  padding-bottom: 38px; /* Espacio interno bajo la línea divisoria */
+}
+
+nav ul {
+  list-style-type: none; /* Elimina los estilos de la lista */
+  padding: 0; /* Elimina el espacio interno de la lista */
+}
+
+nav ul li {
+  padding: 20px 60px; /* Espacio interno de cada ítem de la lista */
+}
+
+nav ul li a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: #BC955C; /* Color del texto del enlace */
+  display: block; /* Hace que los enlaces ocupen todo el espacio del contenedor li */
+}
+
+nav ul li a:hover {
+  background-color: #BC955C; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
+
+.sidebar-image {/* logo menu */
+  text-align: center; /* Alineación centrada del contenido */
+  margin-bottom: -20; /* Espacio inferior */
+  margin-top:20px;
+  height: 47px;
+}
+
+.sidebar-image img {
+  max-width: 75%; /* Ancho máximo del elemento img */
+  height: auto; /* Altura automática para mantener la proporción */
+  border-radius: 0%; /* Borde redondeado para la imagen */
+  box-shadow: 100 100 100px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/*PARA IMAGEN AL LADO MENU*/
+.sidebar-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-item {
+  padding: 10px 20px;
+  position: relative;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item .menu-icon {
+  width: 30px; /* Ajusta el tamaño de los iconos según sea necesario */
+  height: 35px;
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+.sidebar-image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-image img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.titulomenu {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #10312B;
+  border-bottom: 3px solid #10312B;
+  padding-bottom: 20px;
+}
+
+nav ul li {
+  margin-bottom: 20px; /* Aumenta el espacio entre cada elemento de la lista */
+  
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #10312B;
+  font-family: 'Montserrat', ; /* Cambia la fuente de letra */
+}
+
+nav ul li a:hover {
+  background-color: #BC955C;
+  color: white;
+}
+
+
+
+  #Contenedor_del_mapa{
+    height: 450px;
+    width: 850px;
+    margin-bottom: 50px;
+    margin-left: -1045px;
+    position: absolute;
+    display:flex;
+    margin-top: 50px; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 60px;/* Ajusta el margen inferior según sea necesario */
+    
+  }
+
+
+
+.Introduccion {
+  background-color: #235B4E;
+    height: 40px;
+    width:85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1px; /* Ajuste para superponer sobre el header */
+}
+
+.introducciondiseño {
+  color: white;
+  font-size: 15px;
+  max-width: 80%; /* Limita el ancho máximo del texto */
+  text-align: center; /* Centra el texto horizontalmente */
+  background-color: #235B4E; /* Color de fondo */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.lineatexto {
+  position: relative; /* Posicionamiento absoluto */
+  bottom: 0;
+  left: 40%; /* Centra la línea horizontalmente */
+  transform: translateX(-50%); /* Centra la línea horizontalmente */
+  width: 83%; /* Ancho de la línea */
+  height: 5px; /* Grosor de la línea */
+  background-color: #BC955C; /* Color de la línea */
+  margin-top:-15px; /* Ajusta el margen superior según sea necesario */
+  margin-bottom: 0px;/* Ajusta el margen inferior según sea necesario */
+  z-index: 1; /* Para estar por encima de la franja superior */
+  
+}
+
+
+#franja2 {
+  background-color: #f6f6f6;
+    height: 60px;
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0px; /* Ajuste para superponer sobre la franja superior */
+    position: relative;
+    border-top: px solid #ccc; /* Borde superior */
+}
+
+
+.nav-button {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    flex: 1;
+    padding: 10px 50px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: relative;
+    background-color: #10312B; /* Color de fondo por defecto */
+    font-size:  20px; /* Tamaño de fuente del texto dentro de los botones */
+
+}
+
+.nav-button img { /*  logos botones */
+  width: 45px; /* Ajustamos el tamaño de los logos */
+    height: auto;
+    margin-right: 85px; /* Espacio entre el logo y el texto */
+    
+}
+
+
+.nav-button:hover {
+  background-color: #BC955C; /* Color de fondo al pasar el cursor */
+}
+
+
+.nav-button span {
+  margin-left: 10px; /* Espacio entre el logo y el texto */
+  padding-right: 20px; /* Ajusta el espacio hacia la derecha del texto */
+}
+
+
+
+/* graficas chicas */
+
+
+.btn_1, .btn_2 {
+  background-color: #BC955C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn_1:hover, .btn_2:hover {
+  background-color: #BC955C;
+}
+
+
+
+.chart-container {
+  height: 400px; /* Ajusta la altura según sea necesario */
+  max-width: 350px; /* Establece un ancho máximo para la gráfica */
+  margin: 0px auto; /* Centra el contenedor horizontalmente y ajusta los márgenes */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  margin-left: -91.5%; /*ajustar al lado derecho*/
+  margin-right: 80px;/* Ajusta el margen izquierdo según sea necesario */
+  position: absolute;
+  display:flex;
+  margin-top: 1000px; /* Ajusta el margen superior según sea necesario */
+  margin-bottom: 60px;/* Ajusta el margen inferior según sea necesario */
+}
+
+
+
+
+
+/* grafica principal */
+
+#contenedor_grafico {
+  height: 400px; /* Ajusta la altura según sea necesario */
+  max-width: 860px; /* Establece un ancho máximo para la gráfica */
+  margin: 0px auto; /* Centra el contenedor horizontalmente */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  margin-left: -91.5%; /*ajustar al lado derecho*/
+  margin-right: 80px;/* Ajusta el margen izquierdo según sea necesario */
+  position: absolute;
+  display:flex;
+  margin-top: 600px; /* Ajusta el margen superior según sea necesario */
+  margin-bottom: 60px;/* Ajusta el margen inferior según sea necesario */
+}
+
+
+.highcharts-container {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #f6f6f6;
+}
+
+.highcharts-figure {
+  max-width: 40px;
+  margin: 1em auto;
+}
+
+.highcharts-data-table table {
+  border-collapse: collapse;
+  margin: 0 0 1em;
+  width: 85%;
+  max-width: 500px;
+  font-size: 0.9em;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.highcharts-data-table td, .highcharts-data-table th {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.highcharts-data-table caption {
+  padding: 0.5em;
+  caption-side: bottom;
+}
+
+.highcharts-figure, .highcharts-data-table {
+  min-width: 310px;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+.highcharts-figure {
+  position: relative;
+  text-align: center;
+}
+
+.highcharts-figure > * {
+  max-width: 100%;
+}
+
+.highcharts-title {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.highcharts-subtitle {
+  margin-bottom: 20px;
+}
+
+.highcharts-credits {
+  display: none;
+}
+
+.highcharts-yaxis-labels{
+  color: #235B4E;
+}
+
+.highcharts-xaxis-labels{
+  color: #235B4E;
+}
+
+.highcharts-legend-item{
+  color: #235B4E;
 }
